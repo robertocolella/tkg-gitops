@@ -7,7 +7,7 @@ spec:
   topology:
     controlPlane:
       replicas: 1
-      vmClass: best-effort-small
+      vmClass: guaranteed-medium
       storageClass: vc01cl01-t0compute
       tkr:  
         reference:
@@ -15,7 +15,7 @@ spec:
     nodePools:
     - name: worker-nodepool-a1
       replicas: 2
-      vmClass: best-effort-small
+      vmClass: guaranteed-medium
       storageClass: vc01cl01-t0compute
       volumes:
         - name: containerd
